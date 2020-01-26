@@ -1,13 +1,22 @@
 1579989927 Start
-1579989934 date -d 'Sat 25 Jan 2020 05:05:34 PM EST' +%s
-1579989939 date -d 'Sat 25 Jan 2020 05:05:39 PM EST' +%s
-1579989946 date -d 'Sat 25 Jan 2020 05:05:46 PM EST' +%s
-1579989953 date -d 'Sat 25 Jan 2020 05:05:53 PM EST' +%s
-1579989960 date -d 'Sat 25 Jan 2020 05:06:00 PM EST' +%s
-1579989968 date -d 'Sat 25 Jan 2020 05:06:08 PM EST' +%s
-1579989975 date -d 'Sat 25 Jan 2020 05:06:15 PM EST' +%s
-1579989982 date -d 'Sat 25 Jan 2020 05:06:22 PM EST' +%s
-1579989987 date -d 'Sat 25 Jan 2020 05:06:27 PM EST' +%s
+1579989934  7  7 date -d 'Sat 25 Jan 2020 05:05:34 PM EST' +%s
+1579989939 12  5 date -d 'Sat 25 Jan 2020 05:05:39 PM EST' +%s
+1579989946 19  7 date -d 'Sat 25 Jan 2020 05:05:46 PM EST' +%s
+1579989953 26  7 date -d 'Sat 25 Jan 2020 05:05:53 PM EST' +%s
+1579989960 33  7 date -d 'Sat 25 Jan 2020 05:06:00 PM EST' +%s
+1579989968 41  8 date -d 'Sat 25 Jan 2020 05:06:08 PM EST' +%s
+1579989975 48  7 date -d 'Sat 25 Jan 2020 05:06:15 PM EST' +%s
+1579989982 55  7 date -d 'Sat 25 Jan 2020 05:06:22 PM EST' +%s
+1579989987 60  5 date -d 'Sat 25 Jan 2020 05:06:27 PM EST' +%s
+
+
+
+
+
+
+
+
+
 
 
 
