@@ -91,6 +91,8 @@ try:
     fftsize = math.ceil(samplerate / delta_f)
     low_bin = math.floor(low / delta_f)
 
+    gain_mod = args.gain / fftsize
+
     def callback(indata, frames, time, status):
         if status:
             text = ' ' + str(status) + ' '
@@ -98,10 +100,9 @@ try:
                   '\x1b[0m', sep='')
         if any(indata):
             magnitude = np.abs(np.fft.rfft(indata[:, 0], n=fftsize))
-            magnitude *= args.gain / fftsize
+            magnitude *= gain_mod
             total = np.sum(magnitude[low_bin:low_bin + args.columns])
-            print('%7.4f ' % total, end='')
-            if total > 9990.5:
+            if total > 0.5:
                 line = (gradient[int(np.clip(x, 0, 1) * (len(gradient) - 1))]
                         for x in magnitude[low_bin:low_bin + args.columns])
                 #print('%7.4f ' % total, *line, sep='', end='\x1b[0m\n')
@@ -123,8 +124,10 @@ try:
             for ch in response:
                 if ch == '+':
                     args.gain *= 2
+                    #print(args.gain)
                 elif ch == '-':
                     args.gain /= 2
+                    #print(args.gain)
                 else:
                     print('\x1b[31;40m', usage_line.center(args.columns, '#'),
                           '\x1b[0m', sep='')
